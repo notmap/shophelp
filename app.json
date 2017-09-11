@@ -1,0 +1,28 @@
+{
+	"debug": false,
+
+	"pages": [
+		"pages/shop/shop",
+		"pages/shop_info/shop_info",
+		"pages/order/order",
+		"pages/address/address",
+		"pages/address_add/address_add",
+		"pages/express/express",
+		"pages/score/score"
+	],
+
+	"window": {
+		"navigationBarBackgroundColor": "#ffd300",
+		"navigationBarTextStyle": "black",
+		"backgroundColor": "#efefef",
+		"backgroundTextStyle": "dark",
+		"navigationBarTitleText": "外卖订餐"
+	},
+
+	"networkTimeout": {
+		"request": 10000,
+		"connectSocket": 10000,
+		"uploadFile": 10000,
+		"downloadFile": 10000
+	}
+}

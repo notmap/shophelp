@@ -1,0 +1,64 @@
+
+
+/*--------------------------------address--------------------------------*/
+
+.unit {
+	/*height: 80rpx;*/
+	padding: 28rpx;
+	background-color: white;
+	margin-bottom: 2rpx;
+	height: 56rpx;
+}
+
+.unit-text {
+	display: block;
+	float: left;
+	/*background-color: red;*/
+	font-size: 28rpx;
+	line-height: 56rpx;
+	width: 140rpx;
+}
+
+.unit-input {
+	display: block;
+	float: left;
+	/*background-color: green;*/
+	font-size: 28rpx;
+	width: 480rpx;
+	height: 56rpx;
+}
+
+.unit-img {
+	display: block;
+	float: right;
+	/*background-color: red;*/
+	width: 32rpx;
+	height: 32rpx;
+	padding: 12rpx 0;
+}
+
+
+/*--------------------------------add--------------------------------*/
+
+
+.save {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100rpx;
+	background-color: #ffd300;
+	text-align: center;
+}
+
+.save-text {
+	font-size: 28rpx;
+	font-weight: bold;
+	line-height: 100rpx;
+	color: #000;
+}
+
+
+
+
+
