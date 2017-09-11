@@ -2,13 +2,7 @@
 	"debug": false,
 
 	"pages": [
-		"pages/shop/shop",
-		"pages/shop_info/shop_info",
-		"pages/order/order",
-		"pages/address/address",
-		"pages/address_add/address_add",
-		"pages/express/express",
-		"pages/score/score"
+		"pages/index/index"
 	],
 
 	"window": {
