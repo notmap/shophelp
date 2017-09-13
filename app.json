@@ -2,7 +2,11 @@
 	"debug": false,
 
 	"pages": [
+<<<<<<< HEAD
 		"pages/count/count",
+=======
+
+>>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
 		"pages/order/order",
 		"pages/data/data"
 	],
@@ -12,7 +16,7 @@
 		"navigationBarTextStyle": "black",
 		"backgroundColor": "#efefef",
 		"backgroundTextStyle": "dark",
-		"navigationBarTitleText": "外卖订餐"
+		"navigationBarTitleText": "外卖助手"
 	},
 
 	"networkTimeout": {

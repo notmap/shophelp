@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -28,3 +29,10 @@
 </view>
 	
 
+=======
+<swiper class="sone" indicator-dots="{{dots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper-item wx:for="{{imgUrls}}">
+        <image src="{{item}}"></image>
+    </swiper-item>
+</swiper>
+>>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
