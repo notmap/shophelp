@@ -12,7 +12,7 @@ Page({
         orderEnable: false,
 		swiper: {
             current: '0',
-            show: true
+            show: false
         },
 		cart: {
 			count: 0,

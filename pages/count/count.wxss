@@ -1,32 +1,10 @@
 
-/*
-* ua => unit one
-* ub => unit two
-* pa => part one
-* pb => part two
-* ta => text one
-* tb => text two
-*/
-
-
-
 
 text {
 	display: block;
 	position: relative;
 	top: 4rpx;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .swiper {
 	height: calc(100% - 80rpx);
@@ -70,7 +48,85 @@ text {
 }
 
 
-/*--------------------------------date--------------------------------*/
+
+/*--------------------------------income--------------------------------*/
+
+
+.income-unit {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: white;	
+	padding: 30rpx 40rpx;
+	margin-bottom: 20rpx;
+	height: 240rpx;
+	position: relative;
+}
+
+.income-unit:after {
+	content:"";
+	display: block;
+	width: calc(100% - 80rpx);
+	height: 2rpx;
+	background-color: #eee;
+	position: absolute;
+	top: 124rpx;
+	left: 40rpx;
+}
+
+.income-unit .text-a { 
+	flex: 50%;
+	flex-grow: 0;
+	width: 70%;
+	line-height: 60rpx;
+	font-size: 28rpx;
+	font-weight: bold;
+	/*background-color: red;*/
+}
+
+.income-unit .text-b { 
+	flex: 25%;
+	flex-grow: 0;
+	width: 70%;
+	line-height: 60rpx;
+	font-size: 28rpx;
+	/*background-color: green;*/
+}
+
+.income-unit .text-c { 
+	flex: 25%;
+	flex-grow: 0;
+	width: 70%;
+	line-height: 60rpx;
+	font-size: 28rpx;
+	/*background-color: red;*/
+}
+
+.income-unit .text-d { 
+	flex: 50%;
+	flex-grow: 0;
+	width: 30%;
+	line-height: 60rpx;
+	font-size: 28rpx;
+	font-weight: bold;
+	text-align: right;
+	color: #ccc;
+	/*background-color: green;*/
+}
+
+.income-unit .text-e { 
+	flex: 50%;
+	flex-grow: 0;
+	width: 30%;
+	line-height: 120rpx;
+	font-size: 32rpx;
+	text-align: right;
+	color: red;
+	/*background-color: yellow;*/
+}
+
+
+/*--------------------------------withdraw--------------------------------*/
 
 
 .withdraw-date {
@@ -83,63 +139,46 @@ text {
 	font-size: 28rpx;
 }
 
-
-/*--------------------------------ua--------------------------------*/
-
-
 .withdraw-record {
+	display: flex;
+	flex-wrap: wrap;
 	background-color: white;	
-	padding: 36rpx 0;
+	padding: 36rpx 40rpx;
 	margin-bottom: 2rpx;
 }
 
-.withdraw-record .part-one {
-	display: flex;
-	padding: 14rpx 40rpx;
-}
-
-.withdraw-record .part-one .text-one {
-	flex: 2;
+.withdraw-record .text-a { 
+	flex: 70%;
 	line-height: 32rpx;
 	font-size: 32rpx;
+	padding: 14rpx 0;
 }
 
-.withdraw-record .part-one .text-two {
-	flex: 1;
+.withdraw-record .text-b { 
+	flex: 30%;
 	line-height: 32rpx;
 	font-size: 32rpx;
 	text-align: right;
 	color: red;
+	padding: 14rpx 0;
 }
 
-.withdraw-record .part-two {
-	display: flex;
-	padding: 14rpx 40rpx;
-}
-
-.withdraw-record .part-two .text-one {
-	flex: 2;
+.withdraw-record .text-c { 
+	flex: 70%;
 	line-height: 28rpx;
 	font-size: 28rpx;
+	padding: 14rpx 0;
 	color: #ccc;
 }
 
-.withdraw-record .part-two .text-two {
-	flex: 1;
+.withdraw-record .text-d { 
+	flex: 30%;
 	line-height: 28rpx;
 	font-size: 28rpx;
 	text-align: right;
+	padding: 14rpx 0;
 	color: #ccc;
 }
-
-
-
-
-
-
-
-
-
 
 
 

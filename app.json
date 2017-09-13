@@ -2,6 +2,7 @@
 	"debug": false,
 
 	"pages": [
+
 		"pages/count/count",
 		"pages/order/order",
 		"pages/data/data"
@@ -10,9 +11,9 @@
 	"window": {
 		"navigationBarBackgroundColor": "#ffd300",
 		"navigationBarTextStyle": "black",
-		"backgroundColor": "#efefef",
+		"backgroundColor": "#ffffff",
 		"backgroundTextStyle": "dark",
-		"navigationBarTitleText": "外卖订餐"
+		"navigationBarTitleText": "点饭外卖助手"
 	},
 
 	"networkTimeout": {

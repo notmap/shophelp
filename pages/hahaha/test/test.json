@@ -1,7 +1,7 @@
 {
 	"navigationBarBackgroundColor": "#ffd300",
 	"navigationBarTextStyle": "black",
-	"backgroundColor": "#ffffff",
+	"backgroundColor": "#efefef",
 	"backgroundTextStyle": "dark",
 	"navigationBarTitleText": "外卖订餐"
 }

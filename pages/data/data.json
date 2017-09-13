@@ -1,7 +1,8 @@
+
 {
-	"navigationBarBackgroundColor": "#ffd300",
+	"navigationBarBackgroundColor": "#08e3aa",
 	"navigationBarTextStyle": "black",
-	"backgroundColor": "#efefef",
+	"backgroundColor": "#fff",
 	"backgroundTextStyle": "dark",
-	"navigationBarTitleText": "外卖订餐"
+	"navigationBarTitleText": "小程序数据"
 }
