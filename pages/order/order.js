@@ -30,6 +30,8 @@ Page({
 
     onShow: function(option) {
 
+        console.log(this.data.history)
+
         var history = wx.getStorageSync('history');
         if(history) {
             var arr = [];

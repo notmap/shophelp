@@ -3,8 +3,9 @@
 
 	"pages": [
 
-		"pages/count/count",
+		
 		"pages/order/order",
+		"pages/count/count",
 		"pages/data/data"
 	],
 

@@ -1,5 +1,10 @@
-<import src="../../utils/score_show/score_show.wxml" />
+<!-- <import src="../../utils/score_show/score_show.wxml" /> -->
 <!-- <view class="container"> -->
+
+
+
+
+
 	<view class="tab">
 		<view class="tab-name {{swiper.current == 0 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="0">商品</view>
 		<view class="tab-name {{swiper.current == 1 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="1">评分</view>
@@ -10,17 +15,35 @@
 
 		<swiper-item>
 			<scroll-view class="history" scroll-y="true" data-fun="menu.onScroll" bindscroll="onEvent" wx:if="{{swiper.show}}" bindtouchstart="start" bindtouchend="end">
-<!-- 				<view>
-					<text>订单号: 256398745126</text>
-					<text>待接单[4:16]</text>
-					<block>
-						<text>铁板牛肉饭</text>
-						<text>×3</text>
-					</block>
-					<text>共3件商品, 实付￥24</text>
-					<button>拒单</button>
-					<button>确认订单</button>
-				</view> -->
+
+
+
+				<view class="history-unit">
+					<text class="text-a">订单号: 256398745126</text><text class="text-b">待接单[4:16]</text>
+					<!-- <block> -->
+					<text class="text-c">铁板牛肉饭</text><text class="text-d">×3</text>
+					<text class="text-c">铁板牛肉饭</text><text class="text-d">×3</text>
+					<text class="text-c">铁板牛肉饭</text><text class="text-d">×3</text>
+					<!-- </block> -->
+					<text class="text-e">...</text><text class="text-f">共3件商品, 实付￥24</text>
+					<button class="button-a">拒单</button><button class="button-b">确认订单</button>
+				</view>
+
+				<view class="history-unit">
+					<text class="text-a">订单号: 256398745126</text><text class="text-b">待接单[4:16]</text>
+					<!-- <block> -->
+					<text class="text-c">铁板牛肉饭</text><text class="text-d">×3</text>
+					<text class="text-c">铁板牛肉饭</text><text class="text-d">×3</text>
+					<text class="text-c">铁板牛肉饭</text><text class="text-d">×3</text>
+					<!-- </block> -->
+					<text class="text-e">...</text><text class="text-f">共3件商品, 实付￥24</text>
+					<button class="button-a">拒单</button><button class="button-b">确认订单</button>
+				</view>
+
+
+
+
+			
 
 
 
@@ -30,7 +53,7 @@
 
 
 
-				<view class="debug">
+				<!-- <view class="debug">
 				    <view class="history-order" wx:for="{{history}}" wx:key="id">
 				        <view class="history-head">
 				            <image class="history-logo" src="{{shop.logo}}"/>
@@ -51,50 +74,17 @@
 				            <button class="history-button" data-id="{{item.id}}" data-fun="{{item.data}}" bindtap="onEvent">{{item.button}}</button>
 				        </view>
 				    </view>
-				</view>    
+				</view>    --> 
+
+
 			</scroll-view>
 		</swiper-item>
 
-		<swiper-item class="menu">
-			<scroll-view class="classify" scroll-y="true">
-				<view class="classify-unit {{classifySeleted == item.id ? 'classify-active' : ''}}" wx:for="{{classify}}" wx:key="id" data-id="{{item.id}}" data-fun="menu.switchClassify" bindtap="onEvent">
-					<text class="classify-name">{{item.name}}</text>
-				</view>
-			</scroll-view>
-			<scroll-view class="product" scroll-y="true" scroll-into-view="{{classifyViewed}}" data-fun="menu.onScroll" bindscroll="onEvent" bindtouchstart="start" bindtouchend="end">
-				<view class="debug">
-					<view class="product-section" wx:for="{{classify}}" wx:key="id" id="{{item.id}}">
-						<view class="product-classify">{{item.name}}</view>
-						<view class="product-unit" wx:for="{{item.product}}" wx:for-item="id" wx:key="*this">
-							<image class="product-img" src="{{product[id].img}}" wx:if="{{product[id].loaded}}"></image>
-							<text class="product-name ellipsis">{{product[id].name}}</text>
-							<text class="product-price">￥{{product[id].price}}</text>
-							<image class="product-addCart" src="../../imgs/add.png" data-fun="cart.addCart" bindtap="onEvent" data-id="{{id}}"></image>
-						</view>
-					</view>
-				</view>
-			</scroll-view>
-		</swiper-item>
-
-		<swiper-item>
-			<scroll-view class="comment" scroll-y="true" data-fun="menu.onScroll" bindscroll="onEvent" wx:if="{{swiper.show}}" bindtouchstart="start" bindtouchend="end">
-				<view class="debug">
-					<view class="comment-unit" wx:for="{{comment}}" wx:key="id">
-						<view class="comment-meta">
-							<image class="comment-avatar" src="{{item.avatar}}"></image>
-							<text class="comment-name ellipsis">{{item.name}}</text>
-							<text class="comment-time">{{item.time}}</text>
-							<template is="score-show" data="{{...item}}"></template>
-						</view>
-						<view class="comment-content">{{item.content}}</view>
-					</view>
-				</view>
-			</scroll-view>
-		</swiper-item>
-
+		<swiper-item></swiper-item>
+		<swiper-item></swiper-item>
 	</swiper>
 
 <!-- </view> -->
 
-<import src="../../utils/img_loader/img_loader.wxml"/>
-<template is="img-loader" data="{{ imgLoadList }}"></template>
+<!-- <import src="../../utils/img_loader/img_loader.wxml"/> -->
+<!-- <template is="img-loader" data="{{ imgLoadList }}"></template> -->

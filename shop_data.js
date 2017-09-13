@@ -217,7 +217,7 @@ module.exports = {
                 checkout: {
                     boxfee: 2.5,
                     discount: 10,
-                    total: 4,
+                    total: 3,
                     money: 56.50
                 }
             }
@@ -255,7 +255,7 @@ module.exports = {
                 checkout: {
                     boxfee: 2.5,
                     discount: 10,
-                    total: 4,
+                    total: 3,
                     money: 56.50
                 }
             }
@@ -287,6 +287,14 @@ module.exports = {
                         img: 'http://www.legaoshuo.com/hexie/good/3.jpg',
                         price: 8,
                         amount: 2,
+                        remark: "常规"
+                    },
+                    {
+                        id: 4,
+                        name: '一般般好吃的炒饭',
+                        img: 'http://www.legaoshuo.com/hexie/good/4.jpg',
+                        price: 6,
+                        amount: 1,
                         remark: "常规"
                     }
                 ],
@@ -331,7 +339,7 @@ module.exports = {
                 checkout: {
                     boxfee: 2.5,
                     discount: 10,
-                    total: 4,
+                    total: 3,
                     money: 56.50
                 }
             }
@@ -361,7 +369,7 @@ module.exports = {
                 checkout: {
                     boxfee: 2.0,
                     discount: 10,
-                    total: 3,
+                    total: 2,
                     money: 56.50
                 }
             }
