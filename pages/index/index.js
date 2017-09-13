@@ -33,11 +33,13 @@ Page({
     },
 
     jump: function(e) {
-        var data = JSON.stringify(e.currentTarget.dataset.jump);
-        wx.navigateTo({url: `../address_add/address_add?data=${data}`});
-        wx.setStorage({
-            key: 'addressArr',
-            data: this.data.rawAddressArr
-        });
+
+        // var data = JSON.stringify(e.currentTarget.dataset.jump);
+        var data = e.currentTarget.dataset.jump;
+        wx.navigateTo({url: `../${data}/${data}`});
+        // wx.setStorage({
+        //     key: 'addressArr',
+        //     data: this.data.rawAddressArr
+        // });
     }
 });

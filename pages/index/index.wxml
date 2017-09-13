@@ -1,7 +1,7 @@
 
 
 
-<view class="warp">
+<view class="warp" data-jump="count" bindtap="jump">
     <view class="uone">
         <image class="uone-img" src="../../imgs/01.png"></image>
         <text class="uone-tone">今日营收</text>
@@ -15,7 +15,7 @@
     </view>
 </view>
 
-<view class="warp">
+<view class="warp"  data-jump="order" bindtap="jump">
     <view class="uone">
         <image class="uone-img" src="../../imgs/02.png"></image>
         <text class="uone-tone">待处理订单</text>
@@ -28,7 +28,7 @@
     </view>
 </view>
 
-<view class="warp">
+<view class="warp"  data-jump="data" bindtap="jump">
     <view class="uone">
         <image class="uone-img" src="../../imgs/03.png"></image>
         <text class="uone-tone">小程序数据</text>

@@ -2,7 +2,9 @@
 	"debug": false,
 
 	"pages": [
-		"pages/index/index"
+		"pages/count/count",
+		"pages/order/order",
+		"pages/data/data"
 	],
 
 	"window": {
