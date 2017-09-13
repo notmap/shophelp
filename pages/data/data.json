@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 {
 	"navigationBarBackgroundColor": "#ffd300",
 	"navigationBarTextStyle": "black",
 	"backgroundColor": "#efefef",
 	"backgroundTextStyle": "dark",
 	"navigationBarTitleText": "外卖订餐"
-=======
-
-{
-	"navigationBarBackgroundColor": "#08e3aa",
-	"navigationBarTextStyle": "black",
-	"backgroundColor": "#fff",
-	"backgroundTextStyle": "dark",
-	"navigationBarTitleText": "小程序数据"
->>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
 }

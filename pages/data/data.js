@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const md5 = require('../../utils/md5.js');
 const ImgLoader = require('../../utils/img_loader/img_loader.js');
 const calc = require('../../utils/calculation.js');
@@ -299,20 +298,4 @@ Page({
         // console.log(data);
         wx.navigateTo({url: `../order/order?data=${data}`});
 	}
-=======
-
-Page({
-    data: {
-        imgUrls: [
-            '../../imgs/data1.png',
-            '../../imgs/data2.png',
-            '../../imgs/data3.png',
-            '../../imgs/data4.png',
-            '../../imgs/data5.png'
-        ],
-        dots: true,
-        autoplay: false,
-        duration: 500
-    }
->>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
 });

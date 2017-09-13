@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .header {
 	position: relative;
 	background: #ffd300;
@@ -606,10 +605,4 @@ button[disabled][type="default"], wx-button[disabled]:not([type]) {
 .debug {
 	min-height: calc(100% + 80rpx);
 	background-color: white;
-=======
-
-.sone, image {
-    height: 100%;
-    width: 100%;
->>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
 }
