@@ -1,0 +1,45 @@
+
+.warp {
+    margin: 20rpx;
+    background-color: #fafafa;
+    border-radius: 8rpx;
+    box-shadow: 0 4rpx 8rpx #ccc;
+}
+
+.uone {
+    padding: 60rpx 40rpx;
+    display: flex;
+}
+
+.uone-img {
+    display: block;
+    width: 64rpx;
+    height: 64rpx;
+}
+
+.uone-tone {
+    display: block;
+    padding-left: 30rpx;
+    line-height: 64rpx;
+    font-size: 36rpx;
+}
+
+.uone-ttwo {
+    display: block;
+    padding-left: 30rpx;
+    line-height: 64rpx;
+    font-size: 36rpx;
+    flex: 1;
+}
+
+.utwo {
+    padding: 0rpx 0rpx 40rpx 0rpx;
+    display: flex;
+}
+
+.utwo-tone {
+    display: block;
+    padding-left: 40rpx;
+    line-height: 24rpx;
+    font-size: 24rpx;
+}

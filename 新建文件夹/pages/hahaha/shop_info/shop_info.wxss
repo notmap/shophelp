@@ -1,0 +1,145 @@
+.header {
+	position: relative;
+	background: #fff;
+	padding: 30rpx;
+	height: 160rpx;
+	color: #000;
+	-webkit-transition: all 0.6s ease-in-out;
+}
+
+.header-logo {
+	float: left;
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 4%;
+	margin-right: 20rpx;
+}
+
+.header-name {
+	display: block;
+	padding-top: 20rpx;
+	font-size: 36rpx;
+	font-weight: bold;
+	line-height: 36rpx;
+	/*background-color: red;*/
+}
+
+.header .score-show {
+	/*width: 600rpx;*/
+	padding-top: 20rpx;
+	/*background-color: green;*/
+}
+
+.header-express {
+	display: block;
+	padding-top: 24rpx;
+	color: #000;
+	font-size: 24rpx;
+	line-height: 24rpx;
+	/*background-color: blue;*/
+}
+
+.shopinfo {
+	margin-top: 20rpx;
+	background-color: white;
+}
+
+.shopinfo-address, .shopinfo-time {
+	height: 48rpx;
+	padding: 30rpx 28rpx;
+	/*background-color: green;*/
+}
+
+.shopinfo-address-icon, .shopinfo-time-icon {
+	display: block;
+	padding: 8rpx 0;
+	width: 32rpx;
+	height: 32rpx;
+	float: left;
+}
+
+.shopinfo-address-text, .shopinfo-time-text {
+	display: block;
+	font-size: 30rpx;
+	line-height: 48rpx;
+	float: left;
+	position: relative;
+	top: 2rpx;
+	left: 10rpx;
+	/*background-color: yellow;*/
+}
+
+.shopinfo-phone {
+	display: block;
+	width: 48rpx;
+	height: 48rpx;
+	float: right;
+}
+
+.shopinfo-photos {
+	width: 100%;
+	height: 150rpx;
+	overflow: hidden;
+}
+
+.shopinfo-photos-unit {
+	padding: 0 20rpx;
+}
+
+.shopinfo-photos-img {
+	display: block;
+	float: left;
+	padding: 0 2rpx;
+	width: 232rpx;
+	height: 174rpx;
+}
+
+.notice {
+	margin-top: 20rpx;
+	background-color: white;
+}
+
+.notice-tip {
+	height: 32rpx;
+	padding: 40rpx 28rpx;
+}
+
+.notice-tip-icon {
+	display: block;
+	width: 32rpx;
+	height: 32rpx;
+	float: left;
+}
+
+.notice-tip-text {
+	display: block;
+	font-size: 30rpx;
+	line-height: 30rpx;
+	float: left;
+	position: relative;
+	top: 2rpx;
+	left: 10rpx;
+}
+
+.notice-promotion {
+	padding: 0 0 30rpx 80rpx;
+	color: #000;
+	font-size: 24rpx;
+	line-height: 24rpx;
+	position: relative;
+}
+.notice-promotion:after {
+	content: "减";
+	padding: 0 4rpx;
+	line-height: 30rpx;
+	color: white;
+	height: 30rpx;
+	background-color: #f07373;
+	position: absolute;
+	top: -4rpx;
+	left: 30rpx;
+}
+
+.notice-promotion-discount {
+	margin-right: 20rpx;
+}

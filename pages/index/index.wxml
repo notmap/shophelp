@@ -1,16 +1,13 @@
 
-<<<<<<< HEAD
 
 
 <view class="warp" data-jump="count" bindtap="jump">
-=======
-<view class="warp" data-jump="income" bindtap="jump">
->>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
     <view class="uone">
         <image class="uone-img" src="../../imgs/01.png"></image>
         <text class="uone-tone">今日营收</text>
         <text class="uone-ttwo">25648.00元</text>
     </view>
+
     <view class="utwo">
         <text class="utwo-tone">余额 : 2536元</text>
         <text class="utwo-tone">提现中 : 62413元</text>
@@ -18,32 +15,26 @@
     </view>
 </view>
 
-<<<<<<< HEAD
 <view class="warp"  data-jump="order" bindtap="jump">
-=======
-<view class="warp" data-jump="order" bindtap="jump">
->>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
     <view class="uone">
         <image class="uone-img" src="../../imgs/02.png"></image>
         <text class="uone-tone">待处理订单</text>
         <text class="uone-ttwo">2</text>
     </view>
+
     <view class="utwo">
         <text class="utwo-tone">订单总数 : 26536</text>
         <text class="utwo-tone">今日订单 : 813</text>
     </view>
 </view>
 
-<<<<<<< HEAD
 <view class="warp"  data-jump="data" bindtap="jump">
-=======
-<view class="warp" data-jump="data" bindtap="jump">
->>>>>>> af2e04bb191faa2783aae03fecdb0147ff2b23af
     <view class="uone">
         <image class="uone-img" src="../../imgs/03.png"></image>
         <text class="uone-tone">小程序数据</text>
         <text class="uone-ttwo"></text>
     </view>
+
     <view class="utwo">
         <text class="utwo-tone">店铺运营数据, 点击查看 >></text>
     </view>
