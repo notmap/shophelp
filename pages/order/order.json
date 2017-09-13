@@ -1,7 +1,7 @@
 {
-		"navigationBarBackgroundColor": "#ffd300",
-		"navigationBarTextStyle": "black",
-		"backgroundColor": "#efefef",
-		"backgroundTextStyle": "dark",
-		"navigationBarTitleText": "订单"
+	"navigationBarBackgroundColor": "#ffd300",
+	"navigationBarTextStyle": "black",
+	"backgroundColor": "#efefef",
+	"backgroundTextStyle": "dark",
+	"navigationBarTitleText": "待处理订单"
 }
