@@ -122,7 +122,7 @@ Page({
             item.detail.goods.length > 3 ? item.fold = true : item.fold = false;
             item.button = orderStatus[item.status].button;
             item.data = orderStatus[item.status].data;
-            item.statusInfo = orderStatus[item.status].status;
+            item.status = orderStatus[item.status].status;
             return item;
         });
     },

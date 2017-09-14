@@ -1,6 +1,6 @@
 
 <swiper class="sone" indicator-dots="{{dots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <swiper-item wx:for="{{imgUrls}}">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="{{item}}">
         <image src="{{item}}"></image>
     </swiper-item>
 </swiper>

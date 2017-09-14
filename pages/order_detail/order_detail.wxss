@@ -1,0 +1,93 @@
+
+
+
+button {
+	margin-left:0;
+	margin-right:0;
+}
+
+
+/*-----------------------------------------order-----------------------------------------*/
+
+.order-meta-line:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2rpx;
+	background-color: #efefef;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.order-meta {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	padding: 40rpx;
+	background-color: #fff;
+	margin-bottom: 20rpx;
+	/*position: relative;*/
+}
+
+.order-meta .text-a {
+	flex: 100%;
+	font-size: 28rpx;
+	line-height: 100rpx;
+	font-weight: bold;
+	/*background-color: red;*/
+	position: relative;
+}
+
+.order-meta .text-b {
+	flex: 30%;
+	font-size: 28rpx;
+	line-height: 100rpx;
+	/*background-color: green;*/
+	position: relative;
+}
+
+.order-meta .text-c {
+	flex: 70%;
+	font-size: 28rpx;
+	line-height: 100rpx;
+	text-align: right;
+	/*background-color: yellow;*/
+	position: relative;
+}
+
+.order-meta .text-d {
+	flex: 30%;
+	font-size: 28rpx;
+	line-height: 100rpx;
+	/*background-color: red;*/
+	position: relative;
+}
+
+.order-meta .text-e {
+	flex: 70%;
+	font-size: 28rpx;
+	line-height: 100rpx;
+	text-align: right;
+	/*background-color: green;*/
+	position: relative;
+}
+
+.order-meta .text-f {
+	flex: 30%;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	padding: 30rpx 0;
+	/*background-color: yellow;*/
+	position: relative;
+}
+
+.order-meta .text-g {
+	flex: 70%;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	padding: 30rpx 0;
+	text-align: right;
+	/*background-color: red;*/
+	position: relative;
+}

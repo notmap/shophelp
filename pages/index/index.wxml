@@ -1,7 +1,7 @@
 
 
 
-<view class="warp" data-jump="income" bindtap="jump">
+<view class="warp" data-jump="count" bindtap="jump">
     <view class="uone">
         <image class="uone-img" src="../../imgs/01.png"></image>
         <text class="uone-tone">今日营收</text>

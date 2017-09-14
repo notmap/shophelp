@@ -1,0 +1,19 @@
+
+
+		
+<view class="order-meta">
+	<text class="text-a order-meta-line">订单信息</text>
+	<text class="text-b order-meta-line">订单状态</text><text class="text-c order-meta-line">已完成</text>
+	<text class="text-d order-meta-line">下单时间</text><text class="text-e order-meta-line">2017-09-14 16:25:45</text>
+	<text class="text-f">收货地址</text><text class="text-g">鄞州区天高巷456号汇港大厦2楼204室 17681762256 猫空空</text>
+</view>
+
+
+<view class="order-content">
+	<text class="text-a order-meta-line">订单信息</text>
+	<text class="text-b order-meta-line">订单状态</text><text class="text-c order-meta-line">已完成</text>
+	<text class="text-d order-meta-line">下单时间</text><text class="text-e order-meta-line">2017-09-14 16:25:45</text>
+	<text class="text-f">收货地址</text><text class="text-g">鄞州区天高巷456号汇港大厦2楼204室 17681762256 猫空空</text>
+</view>
+
+

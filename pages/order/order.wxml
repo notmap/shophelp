@@ -11,9 +11,9 @@
 	<swiper class="main" current="{{swiper.current}}" data-fun="tab.switchTab" bindchange="onEvent">
 		<swiper-item>
 			<scroll-view class="neworder" scroll-y="true" data-fun="menu.onScroll" bindscroll="onEvent">
-				<view class="neworder-unit" wx:for="{{newOrder}}">
-					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.status}}</text>
-					<block wx:for="{{item.detail.goods}}" wx:for-item="good">
+				<view class="neworder-unit" wx:for="{{newOrder}}" wx:key="item.id">
+					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
+					<block wx:for="{{item.detail.goods}}" wx:for-item="good" wx:key="item.id">
 						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.amount}}</text>
 					</block>
 					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.detail.checkout.total}}件商品, 实付￥{{item.detail.checkout.money}}</text>
@@ -24,9 +24,9 @@
 
 		<swiper-item>
 			<scroll-view class="neworder" scroll-y="true" data-fun="menu.onScroll" bindscroll="onEvent">
-				<view class="neworder-unit" wx:for="{{ingOrder}}">
-					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.status}}</text>
-					<block wx:for="{{item.detail.goods}}" wx:for-item="good">
+				<view class="neworder-unit" wx:for="{{ingOrder}}" wx:key="item.id">
+					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
+					<block wx:for="{{item.detail.goods}}" wx:for-item="good" wx:key="item.id">
 						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.amount}}</text>
 					</block>
 					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.detail.checkout.total}}件商品, 实付￥{{item.detail.checkout.money}}</text>
@@ -37,9 +37,9 @@
 
 		<swiper-item>
 			<scroll-view class="neworder" scroll-y="true" data-fun="menu.onScroll" bindscroll="onEvent">
-				<view class="neworder-unit" wx:for="{{overOrder}}">
-					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.status}}</text>
-					<block wx:for="{{item.detail.goods}}" wx:for-item="good">
+				<view class="neworder-unit" wx:for="{{overOrder}}" wx:key="item.id">
+					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
+					<block wx:for="{{item.detail.goods}}" wx:for-item="good" wx:key="item.id">
 						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.amount}}</text>
 					</block>
 					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.detail.checkout.total}}件商品, 实付￥{{item.detail.checkout.money}}</text>

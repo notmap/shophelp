@@ -9,7 +9,7 @@
 	<swiper-item class="swiper-item">
 		<scroll-view class="income" scroll-y="true">
 
-			<view class="income-unit" wx:for="{{income}}">
+			<view class="income-unit" wx:for="{{income}}" wx:key="{{item.id}}">
 				<text class="text-a">订单号: {{item.id}}</text>
 				<text class="text-b">付款人姓名 {{item.name}}</text>
 				<text class="text-c">付款人电话 {{item.phone}}</text>
@@ -23,11 +23,11 @@
 	<swiper-item class="swiper-item">
 		<scroll-view class="withdraw" scroll-y="true">
 
-			<view class="withdraw-unit" wx:for="{{withdraw}}">
+			<view class="withdraw-unit" wx:for="{{withdraw}}" wx:key="{{item.date}}">
 				<view class="withdraw-date">
 					<text>{{item.date}}</text>
 				</view>
-				<view class="withdraw-record"  wx:for="{{item.record}}" wx:for-item="record">
+				<view class="withdraw-record"  wx:for="{{item.record}}" wx:for-item="record"  wx:key="{{record.id}}">
 					<text class="text-a">订单编号: {{record.id}}</text>
 					<text class="text-b">{{record.amount}}</text>
 					<text class="text-c">{{item.date}} {{record.time}}</text>
