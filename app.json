@@ -2,10 +2,9 @@
 	"debug": false,
 
 	"pages": [
-		"pages/order_detail/order_detail",
 		"pages/index/index",
 		"pages/count/count",
-		
+		"pages/order_detail/order_detail",
 		"pages/order/order",
 		"pages/data/data"
 	],

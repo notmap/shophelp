@@ -127,6 +127,12 @@ Page({
         });
     },
 
+    jump: function(e) {
+        var data = e.currentTarget.dataset.jump;
+        // console.log(data)
+        wx.navigateTo({url: `../order_detail/order_detail`});
+    },
+ 
 
 
 
