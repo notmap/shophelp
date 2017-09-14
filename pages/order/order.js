@@ -1,6 +1,7 @@
 const md5 = require('../../utils/md5.js');
 const ImgLoader = require('../../utils/img_loader/img_loader.js');
 const calc = require('../../utils/calculation.js');
+const orderData = require('../../order_data.js');
 // const server = require('../../utils/server');
 
 var app = getApp();
@@ -22,6 +23,18 @@ Page({
 	},
 
 	onLoad: function (option) {
+
+
+		this.setData({
+			newOrder: this.orderDataHandle(orderData.newOrder),
+			ingOrder: this.orderDataHandle(orderData.ingOrder),
+			overOrder: this.orderDataHandle(orderData.overOrder)
+		});
+
+		// console.log(orderData);
+
+
+
         this.checkSwiper(option);
         this.setMainData();
         this.imgLoader = new ImgLoader(this, this.imageOnLoad.bind(this));
@@ -30,7 +43,8 @@ Page({
 
     onShow: function(option) {
 
-        console.log(this.data.history)
+    	// console.log(this.data.order);
+        // console.log(this.data.history)
 
         var history = wx.getStorageSync('history');
         if(history) {
@@ -67,6 +81,55 @@ Page({
             });
         }
     },
+
+
+
+    orderDataHandle: function(data) {
+
+        // {
+        //     id: 125896321478,
+        //     status: 2,  
+        //     detail: {
+        //         goods: [
+        //             {
+        //                 id: 1,
+        //                 name: '超级麻辣烫',
+        //                 img: 'http://www.legaoshuo.com/hexie/good/1.jpg',
+        //                 price: 12,
+        //                 amount: 1,
+        //                 remark: "常规"
+        //             }
+        //         ],
+        //         checkout: {
+        //             boxfee: 2.5,
+        //             discount: 10,
+        //             total: 3,
+        //             money: 56.50
+        //         }
+        //     }
+        // }
+
+    	var orderStatus = [
+            {status: '待接单', button: true, data: false},
+            {status: '已超时', button: false, data: false},
+            {status: '已接单', button: true, data: 'order.goExpress'},
+            {status: '已取消', button: false, data: 'order.goScore'},
+            {status: '已完成', button: true, data: false},
+            {status: '已退款', button: false, data: false}
+        ];
+
+        return data.map((item, index, arr) => {
+            item.detail.goods.length > 3 ? item.fold = true : item.fold = false;
+            item.button = orderStatus[item.status].button;
+            item.data = orderStatus[item.status].data;
+            item.status = orderStatus[item.status].status;
+            return item;
+        });
+    },
+
+
+
+
 
     checkSwiper: function(option) {
         option.swiper && this.setData({
@@ -136,25 +199,6 @@ Page({
     start: function(e) {
         this.data.startY = e.changedTouches[0].clientY;
         this.data.startTime = e.timeStamp;
-    },
-
-    end: function(e) {
-
-    	// var startY = this.data.startY,
-	    // 	startTime = this.data.startTime,
-	    // 	endY = e.changedTouches[0].clientY,
-	    // 	endTime = e.timeStamp,
-	    // 	interval,
-	    // 	move,
-	    // 	transitionTime;
-
-    	// interval = endTime - startTime;
-    	// console.log(interval);
-    	// move = Math.abs(endY - startY);
-    	// console.log(move);
-
-    	// transitionTime = 130*interval / (1000*move);
-    	// console.log(parseFloat(transitionTime.toFixed(2)));
     },
 
 	header: {

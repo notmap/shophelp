@@ -48,40 +48,50 @@ button {
 	height: 100%;
 }
 
-.menu {
-	height: calc(100% - 80rpx);
-	display: flex;
-}
-
-
 /*-----------------------------------------debug-----------------------------------------*/
 
 
-.debug {
+/*.debug {
 	min-height: calc(100% + 80rpx);
 	background-color: white;
+}*/
+
+
+/*-----------------------------------------neworder-----------------------------------------*/
+
+.neworder {
+	height: calc(100% - 80rpx);
 }
 
-
-/*-----------------------------------------history-----------------------------------------*/
-
-.history-unit {
+.neworder-unit {
 	display: flex;
 	justify-content: flex-end;
 	flex-wrap: wrap;
 	padding: 0 40rpx 36rpx 40rpx;
 	background-color: #fff;
 	margin-bottom: 20rpx;
+	position: relative;
 }
 
-.history-unit .text-a {
+.neworder-unit:after {
+	content: "";
+	display: block;
+	width: calc(100% - 80rpx);
+	height: 2rpx;
+	background-color: #efefef;
+	position: absolute;
+	top: 104rpx;
+	left: 40rpx;
+}
+
+.neworder-unit .text-a {
 	flex: 70%;
 	font-size: 28rpx;
 	line-height: 120rpx;
 	/*background-color: red;*/
 }
 
-.history-unit .text-b {
+.neworder-unit .text-b {
 	flex: 30%;
 	font-size: 28rpx;
 	line-height: 120rpx;
@@ -89,14 +99,14 @@ button {
 	text-align: right;
 }
 
-.history-unit .text-c {
+.neworder-unit .text-c {
 	flex: 70%;
 	font-size: 28rpx;
 	line-height: 50rpx;
 	/*background-color: green;*/
 }
 
-.history-unit .text-d {
+.neworder-unit .text-d {
 	flex: 30%;
 	font-size: 28rpx;
 	line-height: 50rpx;
@@ -104,22 +114,22 @@ button {
 	text-align: right;
 }
 
-.history-unit .text-e {
-	flex: 30%;
+.neworder-unit .text-e {
+	flex: 20%;
 	font-size: 28rpx;
 	line-height: 50rpx;
 	/*background-color: red;*/
 }
 
-.history-unit .text-f {
-	flex: 70%;
+.neworder-unit .text-f {
+	flex: 80%;
 	font-size: 28rpx;
 	line-height: 50rpx;
 	text-align: right;
 	/*background-color: yellow;*/
 }
 
-.history-unit .button-a {
+.neworder-unit .button-a {
 	flex: 25%;
 	flex-grow: 0;
 	font-size: 28rpx;
@@ -130,7 +140,7 @@ button {
 	margin-top: 40rpx;
 }
 
-.history-unit .button-b {
+.neworder-unit .button-b {
 	flex: 25%;
 	flex-grow: 0;
 	font-size: 28rpx;
