@@ -15,7 +15,7 @@
 						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.amount}}</text>
 					</block>
 					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.detail.checkout.total}}件商品, 实付￥{{item.detail.checkout.money}}</text>
-					<button class="button-a" wx:if="{{item.button}}">拒单</button><button class="button-b"  wx:if="{{item.button}}">确认订单</button>
+					<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="refuse">拒单</button><button class="button-b"  wx:if="{{item.button}}" catchtap="orderEvent" data-event="confirm">确认订单</button>
 				</view>
 
 			</scroll-view>
@@ -30,7 +30,7 @@
 						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.amount}}</text>
 					</block>
 					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.detail.checkout.total}}件商品, 实付￥{{item.detail.checkout.money}}</text>
-					<button class="button-a" wx:if="{{item.button}}">取消订单</button>
+					<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="cancel">取消订单</button>
 				</view>
 
 			</scroll-view>
@@ -45,7 +45,7 @@
 						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.amount}}</text>
 					</block>
 					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.detail.checkout.total}}件商品, 实付￥{{item.detail.checkout.money}}</text>
-					<button class="button-a" wx:if="{{item.button}}">退款</button>
+					<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="refund">退款</button>
 				</view>
 
 			</scroll-view>

@@ -132,10 +132,25 @@ Page({
         // console.log(data)
         wx.navigateTo({url: `../order_detail/order_detail`});
     },
- 
 
+    orderEvent: function(e) {
+        this.orderControl[e.currentTarget.dataset.event]();
+    },
 
-
+    orderControl: {
+        refuse: function() {
+            console.log('refuse the order');
+        },
+        confirm: function() {
+            console.log('confirm the order');
+        },
+        cancel: function() {
+            console.log('cancel the order');
+        },
+        refund: function() {
+            console.log('refund the order money');
+        }
+    },
 
     checkSwiper: function(option) {
         option.swiper && this.setData({
