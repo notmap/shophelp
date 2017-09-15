@@ -1,43 +1,53 @@
 // var server = require('./utils/server');
 const scoreShow = require('./utils/score_show/score_show.js');
 App({
-	onLaunch: function () {
-		this.checkSession();
-		var shopData = require('./shop_data.js');
-        this.globalData = {
-            shop: shopData.shop,
-            classify: shopData.classify,
-            product: shopData.product,
-            comment: this.dataHandle.commentDataHandle(shopData.comment),
-            history: this.dataHandle.historyDataHandle(shopData.history),
-            classifySeleted: shopData.classify[0].id,
-            heightArr: this.dataHandle.classifyDataHandle(shopData.classify)
-        }
-	},
+    onLaunch: function () {
 
-	checkSession: function() {
-		wx.checkSession({
-			success: () => {this.getUserInfo();},
-			fail: () => {this.login();}
-		})
-	},
 
-	login: function() {
-		wx.login({
-			success: (res) => {this.getUserInfo();}
-		});
-	},
 
-	getUserInfo: function() {
-		wx.getUserInfo({
-			success: (res) => {
-                this.globalData.userInfo = res.userInfo;
-                var userData = require('./user_data.js');
-                this.globalData.addressArr = userData.addressArr;
-                this.globalData.active = userData.active;
+        this.checkSession();
+        // this.login();
+
+
+
+        // var shopData = require('./shop_data.js');
+        // this.globalData = {
+        //     shop: shopData.shop,
+        //     classify: shopData.classify,
+        //     product: shopData.product,
+        //     comment: this.dataHandle.commentDataHandle(shopData.comment),
+        //     history: this.dataHandle.historyDataHandle(shopData.history),
+        //     classifySeleted: shopData.classify[0].id,
+        //     heightArr: this.dataHandle.classifyDataHandle(shopData.classify)
+        // }
+    },
+
+    checkSession: function() {
+        wx.checkSession({
+            success: () => {this.getUserInfo();},
+            fail: () => {this.login();}
+        })
+    },
+
+    login: function() {
+        console.log('5839@login');
+        wx.login({
+            success: (res) => {
+            	console.log(res);
+            	// this.getUserInfo();
             }
-		});
-	},
+        });
+    },
+
+    getUserInfo: function() {
+        console.log('5839@getUserInfo');
+        wx.getUserInfo({
+            success: (res) => {
+                // console.log(res);
+                this.globalData.userInfo = res.userInfo;
+            }
+        });
+    },
 
     getDate: function(date, delimiter) {
         var year = date.getFullYear();
@@ -53,7 +63,7 @@ App({
         return arrival ? `${hours}:${minutes}` : `${hours}:${minutes}:${seconds}`;
     },
 
-	dataHandle: {
+    dataHandle: {
         productSection: {  // 商品区的高度  单位是rpx
             classify: 74,
             unit: 152,
@@ -99,5 +109,10 @@ App({
             }, 0);
             return heightArr;
         }
+    },
+
+
+    globalData: {
+        userInfo: null
     }
 })
