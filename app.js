@@ -18,22 +18,22 @@ App({
         return this.globalData.pShopId;
     },
 
-    getOpenId: function() {
-        this.globalData.pOpenId || (this.globalData.pOpenId = Promise.all([this.getShopId()]).then((arr) => {
-            return new Promise((resolve, reject) => {
-                wx.login({
-                    success: (res) => {  
-                        console.log(`loginCode: ${res.code}`)
-                        server.getOpenId(res.code, arr[0], (res) => {
-                            console.log(`openId: ${res.data.openid}`);
-                            return resolve(res.data.openid);
-                        });
-                    }
-                });
-            });
-        }));
-        return this.globalData.pOpenId;        
-    },
+    // getOpenId: function() {
+    //     this.globalData.pOpenId || (this.globalData.pOpenId = Promise.all([this.getShopId()]).then((arr) => {
+    //         return new Promise((resolve, reject) => {
+    //             wx.login({
+    //                 success: (res) => {  
+    //                     console.log(`loginCode: ${res.code}`)
+    //                     server.getOpenId(res.code, arr[0], (res) => {
+    //                         console.log(`openId: ${res.data.openid}`);
+    //                         return resolve(res.data.openid);
+    //                     });
+    //                 }
+    //             });
+    //         });
+    //     }));
+    //     return this.globalData.pOpenId;
+    // },
 
     globalData: {}
 })

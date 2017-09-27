@@ -1,19 +1,11 @@
 var app = getApp()
 Page({
 	onLoad: function (options) {
-        // app.globalData.addressArr && this.setData({
-        //     rawAddressArr: app.globalData.addressArr,
-        //     addressArr: this.getAddress(app.globalData.addressArr),
-        //     active: app.globalData.active
-        // });
+ 
     },
 
     onShow: function (options) {
-        // app.globalData.addressArr && this.setData({
-        //     rawAddressArr: app.globalData.addressArr,
-        //     addressArr: this.getAddress(app.globalData.addressArr),
-        //     active: app.globalData.active
-        // })
+ 
     },
 
     getAddress: function(addressArr) {
@@ -33,13 +25,7 @@ Page({
     },
 
     jump: function(e) {
-
-        // var data = JSON.stringify(e.currentTarget.dataset.jump);
         var data = e.currentTarget.dataset.jump;
         wx.navigateTo({url: `../${data}/${data}`});
-        // wx.setStorage({
-        //     key: 'addressArr',
-        //     data: this.data.rawAddressArr
-        // });
     }
 });

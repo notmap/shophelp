@@ -6,22 +6,13 @@ var app = getApp();
 Page({
 
 	data: {
-		specHidden: true,
-		cartHidden: true,
-        orderEnable: false,
 		swiper: {
             current: '0',
             show: true
-        },
-		cart: {
-			count: 0,
-			total: 0,
-			list: {}
-		}
+        }
 	},
 
 	onLoad: function (option) {
-
 		this.setData({
 			newOrder: this.orderDataHandle(orderData.newOrder),
 			ingOrder: this.orderDataHandle(orderData.ingOrder),

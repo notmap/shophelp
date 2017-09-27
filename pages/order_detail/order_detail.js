@@ -1,28 +1,19 @@
 
 const orderData = require('../../order_data.js');
+const deepClone = require('../../utils/deepClone');
 // const server = require('../../utils/server');
 
 var app = getApp();
 Page({
 
 	data: {
-		specHidden: true,
-		cartHidden: true,
-        orderEnable: false,
 		swiper: {
             current: '0',
             show: true
-        },
-		cart: {
-			count: 0,
-			total: 0,
-			list: {}
-		}
+        }
 	},
 
 	onLoad: function (option) {
-
-
 		this.setData({
 			newOrder: this.orderDataHandle(orderData.newOrder),
 			ingOrder: this.orderDataHandle(orderData.ingOrder),
@@ -35,7 +26,8 @@ Page({
 
 
 
-    orderDataHandle: function(data) {
+    orderDataHandle: function(rawData) {
+    	var data = deepClone.deepClone(rawData);
     	var orderStatus = [
             {status: '待接单', button: true, data: false},
             {status: '已超时', button: false, data: false},
