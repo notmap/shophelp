@@ -1,0 +1,12 @@
+
+{
+    "extEnable": true,
+    "ext": {
+        "name": "dianfanzhushou",
+        "attr":
+        {
+            "host": "https://snack.bugdeer.com",
+            "shopId": "100011"
+        }
+    }
+}

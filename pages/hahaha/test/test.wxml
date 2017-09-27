@@ -1,4 +1,0 @@
-
-	<view class="one"></view>
-	<view class="two" style="margin-top: {{marginTop}}rpx" bindtouchstart="start" bindtouchmove="move"></view>
-

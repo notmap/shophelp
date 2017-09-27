@@ -1,5 +1,4 @@
 
-
 text {
 	display: block;
 	position: relative;
@@ -46,7 +45,6 @@ text {
 	height: 6rpx;
 	background-color: #ffd300;
 }
-
 
 
 /*--------------------------------income--------------------------------*/
@@ -179,6 +177,3 @@ text {
 	padding: 14rpx 0;
 	color: #ccc;
 }
-
-
-
