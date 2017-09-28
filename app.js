@@ -1,7 +1,7 @@
 var server = require('./model/server');
 App({
     onLaunch: function() {
-        this.getShopId();
+        // this.getShopId();
     },
 
     getShopId: function() { 

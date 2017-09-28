@@ -9,47 +9,25 @@ Page({
             today: 3648.002,
             remain: 2536.00,
             withdraw: 10000.00,
-            history: 12536.00
+            history: 12536.00,
+            test: {
+                name: 562.3655
+            }
         },
+        test: 354.125,
         order: {},
         dataCount: {}
     },
 
 	onLoad: function (options) {
         this.voicePrompt.createAudioContext(this);
-        this.getFixed(this.data.income.today);
-
-
-
-        var a = {
-            name: 'shanjiu',
-            getName: function() {
-                console.log(this)
-            },
-
-            b: {
-                name: 'xiaobu'
-            }
-        }
-
-        var b = {
-            name: 'xiaobu'
-        }
-
-        a.getName.call(b);
-
-
-
-
-
-
-
+        this.setNewData(['income', 'today'], this.dataHandler.toFixed);
     },
 
     onShow: function (options) {
-        setTimeout(() => {
-            this.voicePrompt.audioPlay(this);
-        }, 3000);
+        // setTimeout(() => {
+        //     this.voicePrompt.audioPlay(this);
+        // }, 3000);
     },
 
     voicePrompt: {
@@ -61,10 +39,20 @@ Page({
         }
     },
 
-    getFixed: function(num) {
-        num = num.toFixed(2);
-        console.log(num)
-        // console.log(this.audioPlay)
+    setNewData: function(attrs, dataHandler) {
+        attrs.reduce((pipeData, value, index) => {
+            if(index == attrs.length - 1) pipeData[value] = dataHandler(pipeData[value]);
+            else return pipeData[value];
+        }, this.data);
+        this.setData({
+            [attrs[0]]: this.data[attrs[0]]
+        });
+    },
+
+    dataHandler: {
+        toFixed: function(data) {
+            return data.toFixed(2);
+        }
     },
 
     getAddress: function(addressArr) {
