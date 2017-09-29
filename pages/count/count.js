@@ -130,13 +130,9 @@ Page({
 	},
 
 	onLoad: function (option) {
-
 	},
 
     onShow: function(option) {
-
-
-
     },
 
 	onEvent: function(e) {

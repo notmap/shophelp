@@ -17,16 +17,16 @@
     <view class="uone">
         <image class="uone-img" src="../../imgs/02.png"></image>
         <text class="uone-tone">待处理订单</text>
-        <text class="uone-ttwo">2</text>
+        <text class="uone-ttwo">{{order.count}}</text>
     </view>
 
     <view class="utwo">
-        <text class="utwo-tone">订单总数 : 26536</text>
-        <text class="utwo-tone">今日订单 : 813</text>
+        <text class="utwo-tone">订单总数 : {{order.history}}</text>
+        <text class="utwo-tone">今日订单 : {{order.today}}</text>
     </view>
 </view>
 
-<view class="warp"  data-jump="data" bindtap="jump">
+<view class="warp" data-jump="data" bindtap="jump">
     <view class="uone">
         <image class="uone-img" src="../../imgs/03.png"></image>
         <text class="uone-tone">小程序数据</text>
