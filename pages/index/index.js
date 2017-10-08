@@ -7,56 +7,58 @@ Page({
             src: 'http://www.legaoshuo.com/asset/prompt.mp3'
         },
         income: {
-            today: 3648,
-            remain: 2536,
-            withdraw: 10000,
-            history: 12536
+            day: 0,
+            month: 0,
+            year: 0
         },
         order: {
-            count: 3,
-            today: 28,
-            history: 256
+            new: 0,
+            day: 0,
+            month: 0,
+            year: 0
         }
     },
 
 	onLoad: function (options) {
+
         pageModel = this; 
-        this.voicePrompt.createAudioContext(); 
-        this.orderSocket.startUp();
-        this.setNewData(['income', 'today'], this.dataHandler.toFixed);
+
+        pageModel.voicePrompt.createAudioContext(); 
+        pageModel.orderSocket.startUp();
+
+        pageModel.getData.getShopSales();
+        pageModel.getData.getNewOrder();
+
+        this.setNewData(['income', 'day'], this.dataHandler.toFixed);
+        this.setNewData(['income', 'month'], this.dataHandler.toFixed);
+        this.setNewData(['income', 'year'], this.dataHandler.toFixed);
     },
 
     onShow: function (options) {
-        setTimeout(() => {
-            pageModel.voicePrompt.audioPlay();
-        }, 1000);
+        // setTimeout(() => {
+        //     pageModel.voicePrompt.audioPlay();
+        // }, 1000);
     },
 
     orderSocket: {
-
         socketOpen: false,
-        socketMsgQueue: ['newOrder', 'newOrder', 'newOrder'],
+        socketMsgQueue: [],
 
         startUp: function() {
-            // this.connect();
-            // this.onOpen();
+            this.connect();
+            this.onOpen();
             this.onMessage();
-            // this.onError();
-            // this.onClose();
+            this.onError();
+            this.onClose();
         },
 
         connect: function() {
             wx.connectSocket({
-            url: 'https://snack.bugdeer.com',
-            data: {
-                x: '',
-                y: ''
-            },
-            header: {
-                'content-type': 'application/json'
-            },
-            protocols: ['protocol1'],
-            method: "POST"
+                url: 'wss://snack.bugdeer.com/channel/notify/100011',
+                header: {
+                    'content-type': 'application/json'
+                },
+                method: "POST"
             });
         },
 
@@ -74,7 +76,7 @@ Page({
         },
 
         checkQueue: function() {
-            console.log(this.socketMsgQueue.length);
+            // console.log(this.socketMsgQueue.length);
             if(this.socketMsgQueue.length > 0) {
                 this.socketMsgQueue.shift();
                 return true;
@@ -83,21 +85,18 @@ Page({
         },
 
         onOpen: function() {
-            wx.onSocketOpen(function(res) {
-                console.log('OK: WebSocket is connected');
-                // this.socketOpen = true;
-                // this.socketMsgQueue.forEach((value, index, arr) => {
-                //     this.sendSocketMessage(value);
-                // });
-                // this.socketMsgQueue = [];
+            wx.onSocketOpen((res) => {
+                console.log('WebSocket: connect');
             });
         },
 
         onMessage: function() {
-
             wx.onSocketMessage((res) => {
-                // console.log('message from server: ' + res.data)
 
+                delete app.globalData.pNewOrder;
+                pageModel.getData.getNewOrder();
+
+                console.log('message from server: ' + res.data)
                 if(!pageModel.voicePrompt.voiceFlag) {
                     pageModel.voicePrompt.audioPlay();
                 }
@@ -108,14 +107,15 @@ Page({
         },
 
         onError: function() {
-            wx.onSocketError(function(res){
+            wx.onSocketError((res) => {
                 console.log('ERR: WebSocket connection is failed')
             });
         },
 
         onClose: function() {
-            wx.onSocketClose(function(res) {
-                console.log('WebSocket is shutdown')
+            wx.onSocketClose((res) => {
+                console.log('WebSocket: shutdown');
+                this.startUp();
             })
         }
     },
@@ -130,7 +130,6 @@ Page({
 
         audioPlay: function () {
             this.voiceFlag = true;
-            console.log('this is audioPlay');
             pageModel.audioCtx.play();
             setTimeout(() => {
                 pageModel.orderSocket.checkQueue() ? this.audioPlay() : (this.voiceFlag = false);
@@ -140,39 +139,21 @@ Page({
 
     getData: {
 
-        getSomeData: function() { 
-            this.globalData.pShopId || (this.globalData.pShopId = new Promise((resolve, reject) => {
-                // var self = this;
-                // if (wx.getExtConfig) {  
-                //     wx.getExtConfig({
-                //         success: function(res) {
-                //             console.log(`shopId: ${res.extConfig.attr.shopId}`);
-                //             return resolve(res.extConfig.attr.shopId);
-                //         }
-                //     });
-                // }
-            }));
-            return this.globalData.pShopId;
+        getShopSales: function() { 
+            app.getShopSales().then((shopSales) => {
+                pageModel.setData({
+                    income: shopSales
+                });
+            });
         },
 
-        getSomeData: function(cb) {  
-            this.globalData.pProduct || (this.globalData.pProduct = Promise.all([this.getShopId()]).then((arr) => {
-                return new Promise((resolve, reject) => {
-                    // var shopId  = arr[0];
-                    // server.getProduct(shopId, (res) => {
-                    //     var product = res.data.data;
-                    //     arrtModify(product, {
-                    //         fullImage: 'img',
-                    //         boxcost: 'boxFee'
-                    //     });
-                    //     return resolve(product);
-                    // });
+        getNewOrder: function() {  
+            app.getNewOrder(1).then((newOrder) => {
+                pageModel.data.order.new = newOrder.length;
+                pageModel.setData({
+                    order: pageModel.data.order
                 });
-            }));
-            // setTimeout(() => {
-            //     console.log(this.globalData.pProduct)
-            // }, 3000)
-            return this.globalData.pProduct;
+            });
         }
     },
 

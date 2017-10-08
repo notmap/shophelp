@@ -2,27 +2,24 @@
 <scroll-view scroll-y class="scrollbox">
     <view class="order-meta">
     	<text class="text-a order-meta-line">订单信息</text>
-    	<text class="text-b order-meta-line">订单状态</text><text class="text-c order-meta-line">已完成</text>
-    	<text class="text-d order-meta-line">下单时间</text><text class="text-e order-meta-line">2017-09-14 16:25:45</text>
-    	<text class="text-f">收货地址</text><text class="text-g">鄞州区天高巷456号汇港大厦2楼204室 17681762256 猫空空</text>
+    	<text class="text-b order-meta-line">订单状态</text><text class="text-c order-meta-line">{{order.statusInfo}}</text>
+    	<text class="text-d order-meta-line">下单时间</text><text class="text-e order-meta-line">{{order.createTime}}</text>
+    	<text class="text-f">收货地址</text><text class="text-g">{{order.orderAddress.address}} {{order.orderAddress.mobile}} {{order.orderAddress.contact}}</text>
     </view>
 
     <view class="order-content">
-    	<text class="text-a">订单号: 254796541258</text>
-        <view class="good-unit">
-            <image src="http://www.legaoshuo.com/hexie/good/3.jpg"></image>
-            <text class="text-b">超级无敌好吃的炒饭 ×2</text><text class="text-c">紫菜汤</text>
-            <text class="text-e">￥24.00</text>
+    	<text class="text-a">订单号: {{order.id}}</text>
+
+        <view class="good-unit" wx:for="{{order.orderProductList}}" wx:key="{{item.id}}">
+            <image src="{{item.fullImage}}"></image>
+            <text class="text-b">{{item.name}} ×{{item.quantity}}</text><text class="text-c">常规</text>
+            <text class="text-e">￥{{item.price}}</text>
         </view>
-        <view class="good-unit">
-            <image src="http://www.legaoshuo.com/hexie/good/4.jpg"></image>
-            <text class="text-b">一般般好吃的鱿鱼 ×2</text><text class="text-c">微辣</text>
-            <text class="text-e">￥36.00</text>
-        </view>
-        <text class="text-f">餐盒费用</text><text class="text-g">￥2.50</text>
-        <text class="text-f">配送费用</text><text class="text-g">￥6.00</text>
-        <text class="text-h">满减优惠</text><text class="text-i">-￥6.00</text>
-        <text class="text-j order-content-line">优惠后合计</text><text class="text-k order-content-line">￥234.00</text>
+
+        <text class="text-f">餐盒费用</text><text class="text-g">￥{{order.totalBoxcost}}</text>
+        <text class="text-f">配送费用</text><text class="text-g">￥{{order.deliverAmount}}</text>
+        <text class="text-h">满减优惠</text><text class="text-i">-￥{{order.totalDiscount}}</text>
+        <text class="text-j order-content-line">优惠后合计</text><text class="text-k order-content-line">￥{{order.realityAmount}}</text>
     </view>
 </scroll-view>
 
