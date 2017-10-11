@@ -7,7 +7,7 @@ const arrtModify = require('./utils/arrtModify');
 App({
     onLaunch: function() {
 
-        this.getShopId();
+        // this.getShopId();
         this.getOpenId();  
         this.getShopSales();
 
@@ -25,7 +25,14 @@ App({
 
     getShopId: function() { 
         this.globalData.pShopId || (this.globalData.pShopId = new Promise((resolve, reject) => {
-            return resolve(100011);
+
+            var timer = setInterval(() => {
+                if(this.globalData.indexShopId) {
+                    clearInterval(timer);
+                    // console.log(this.globalData.indexShopId)
+                    return resolve(this.globalData.indexShopId);
+                }
+            }, 50);
         }));
         return this.globalData.pShopId;
     },

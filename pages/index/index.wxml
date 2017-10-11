@@ -9,9 +9,9 @@
     </view>
 
     <view class="utwo">
-        <text class="utwo-tone">日订单 : {{order.day}}</text>
-        <text class="utwo-tone">月订单 : {{order.month}}</text>
-        <text class="utwo-tone">年订单 : {{order.year}}</text>
+        <text class="utwo-tone">日订单 : {{income.dayCount}}</text>
+        <text class="utwo-tone">月订单 : {{income.monthCount}}</text>
+        <text class="utwo-tone">年订单 : {{income.yearCount}}</text>
     </view>
 </view>
 
@@ -19,12 +19,12 @@
     <view class="uone">
         <image class="uone-img" src="../../imgs/01.png"></image>
         <text class="uone-tone">今日营收</text>
-        <text class="uone-ttwo">{{income.day}}元</text>
+        <text class="uone-ttwo">{{income.dayAmount}}元</text>
     </view>
 
     <view class="utwo">
-        <text class="utwo-tone">月营收 : {{income.month}}元</text>
-        <text class="utwo-tone">年营收 : {{income.year}}元</text>
+        <text class="utwo-tone">月营收 : {{income.monthAmount}}元</text>
+        <text class="utwo-tone">年营收 : {{income.yearAmount}}元</text>
     </view>
 </view>
 

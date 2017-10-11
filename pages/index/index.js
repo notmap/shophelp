@@ -7,19 +7,21 @@ Page({
             src: 'http://www.legaoshuo.com/asset/prompt.mp3'
         },
         income: {
-            day: 0,
-            month: 0,
-            year: 0
+            dayAmount: 0,
+            monthAmount: 0,
+            yearAmount: 0,
+            dayCount: 0,
+            monthCount: 0,
+            yearCount: 0
         },
         order: {
-            new: 0,
-            day: 0,
-            month: 0,
-            year: 0
+            new: 0
         }
     },
 
 	onLoad: function (options) {
+        var indexShop = options.shopId ? options.shopId : 100011;
+        app.globalData.indexShopId = indexShop;
 
         pageModel = this; 
 
@@ -29,9 +31,9 @@ Page({
         pageModel.getData.getShopSales();
         pageModel.getData.getNewOrder();
 
-        this.setNewData(['income', 'day'], this.dataHandler.toFixed);
-        this.setNewData(['income', 'month'], this.dataHandler.toFixed);
-        this.setNewData(['income', 'year'], this.dataHandler.toFixed);
+        this.setNewData(['income', 'dayAmount'], this.dataHandler.toFixed);
+        this.setNewData(['income', 'monthAmount'], this.dataHandler.toFixed);
+        this.setNewData(['income', 'yearAmount'], this.dataHandler.toFixed);
     },
 
     onShow: function (options) {
@@ -141,6 +143,7 @@ Page({
 
         getShopSales: function() { 
             app.getShopSales().then((shopSales) => {
+                // console.log(shopSales)
                 pageModel.setData({
                     income: shopSales
                 });
