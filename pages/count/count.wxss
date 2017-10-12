@@ -6,7 +6,6 @@ text {
 }
 
 .swiper {
-	/*height: calc(100% - 80rpx);*/
 	height: 100%;
 }
 
@@ -18,9 +17,7 @@ text {
 	height: 100%;
 }
 
-
 /*--------------------------------tab--------------------------------*/
-
 
 .tab {
 	height: 80rpx;
@@ -47,9 +44,7 @@ text {
 	background-color: #ffd300;
 }
 
-
 /*--------------------------------income--------------------------------*/
-
 
 .income-unit {
 	display: flex;
@@ -80,7 +75,6 @@ text {
 	line-height: 60rpx;
 	font-size: 28rpx;
 	font-weight: bold;
-	/*background-color: red;*/
 }
 
 .income-unit .text-b { 
@@ -89,7 +83,6 @@ text {
 	width: 70%;
 	line-height: 60rpx;
 	font-size: 28rpx;
-	/*background-color: green;*/
 }
 
 .income-unit .text-c { 
@@ -98,7 +91,6 @@ text {
 	width: 70%;
 	line-height: 60rpx;
 	font-size: 28rpx;
-	/*background-color: red;*/
 }
 
 .income-unit .text-d { 
@@ -110,7 +102,6 @@ text {
 	font-weight: bold;
 	text-align: right;
 	color: #ccc;
-	/*background-color: green;*/
 }
 
 .income-unit .text-e { 
@@ -121,7 +112,6 @@ text {
 	font-size: 32rpx;
 	text-align: right;
 	color: red;
-	/*background-color: yellow;*/
 }
 
 

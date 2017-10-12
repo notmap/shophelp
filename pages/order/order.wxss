@@ -1,15 +1,10 @@
 
-
-
 button {
 	margin-left:0;
 	margin-right:0;
 }
 
-
-
 /*-----------------------------------------tab-----------------------------------------*/
-
 
 .tab {
 	height: 80rpx;
@@ -36,26 +31,11 @@ button {
 	background-color: #ffd300;
 }
 
-
-
-
-
-
 /*-----------------------------------------menu-----------------------------------------*/
-
 
 .main {
 	height: 100%;
 }
-
-/*-----------------------------------------debug-----------------------------------------*/
-
-
-/*.debug {
-	min-height: calc(100% + 80rpx);
-	background-color: white;
-}*/
-
 
 /*-----------------------------------------neworder-----------------------------------------*/
 
@@ -88,14 +68,12 @@ button {
 	flex: 70%;
 	font-size: 28rpx;
 	line-height: 120rpx;
-	/*background-color: red;*/
 }
 
 .neworder-unit .text-b {
 	flex: 30%;
 	font-size: 28rpx;
 	line-height: 120rpx;
-	/*background-color: green;*/
 	text-align: right;
 }
 
@@ -103,14 +81,12 @@ button {
 	flex: 70%;
 	font-size: 28rpx;
 	line-height: 50rpx;
-	/*background-color: green;*/
 }
 
 .neworder-unit .text-d {
 	flex: 30%;
 	font-size: 28rpx;
 	line-height: 50rpx;
-	/*background-color: red;*/
 	text-align: right;
 }
 
@@ -118,7 +94,6 @@ button {
 	flex: 20%;
 	font-size: 28rpx;
 	line-height: 50rpx;
-	/*background-color: red;*/
 }
 
 .neworder-unit .text-f {
@@ -126,7 +101,6 @@ button {
 	font-size: 28rpx;
 	line-height: 50rpx;
 	text-align: right;
-	/*background-color: yellow;*/
 }
 
 .neworder-unit .button-a {
@@ -151,4 +125,3 @@ button {
 	margin-left: 20rpx;
 	margin-top: 40rpx;
 }
-

@@ -1,6 +1,4 @@
 
-
-
 button {
 	margin-left:0;
 	margin-right:0;
@@ -9,7 +7,6 @@ button {
 .scrollbox {
     height: calc(100% - 100rpx);
 }
-
 
 /*-----------------------------------------order-meta-----------------------------------------*/
 
@@ -31,7 +28,6 @@ button {
 	padding: 6rpx 40rpx 0 40rpx;
 	background-color: #fff;
 	margin-bottom: 20rpx;
-	/*position: relative;*/
 }
 
 .order-meta .text-a {
@@ -39,7 +35,6 @@ button {
 	font-size: 28rpx;
 	line-height: 100rpx;
 	font-weight: bold;
-	/*background-color: red;*/
 	position: relative;
 }
 
@@ -47,7 +42,6 @@ button {
 	flex: 30%;
 	font-size: 28rpx;
 	line-height: 100rpx;
-	/*background-color: green;*/
 	position: relative;
 }
 
@@ -56,7 +50,6 @@ button {
 	font-size: 28rpx;
 	line-height: 100rpx;
 	text-align: right;
-	/*background-color: yellow;*/
 	position: relative;
 }
 
@@ -64,7 +57,6 @@ button {
 	flex: 30%;
 	font-size: 28rpx;
 	line-height: 100rpx;
-	/*background-color: red;*/
 	position: relative;
 }
 
@@ -73,7 +65,6 @@ button {
 	font-size: 28rpx;
 	line-height: 100rpx;
 	text-align: right;
-	/*background-color: green;*/
 	position: relative;
 }
 
@@ -82,7 +73,6 @@ button {
 	font-size: 28rpx;
 	line-height: 40rpx;
 	padding: 30rpx 0;
-	/*background-color: yellow;*/
 	position: relative;
 }
 
@@ -92,12 +82,8 @@ button {
 	line-height: 40rpx;
 	padding: 30rpx 0;
 	text-align: right;
-	/*background-color: red;*/
 	position: relative;
 }
-
-
-
 
 /*-----------------------------------------order-content-----------------------------------------*/
 
@@ -116,11 +102,9 @@ button {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    /*height: 160rpx;*/
     padding: 6rpx 40rpx 0 40rpx;
     background-color: #fff;
     margin-bottom: 20rpx;
-    /*position: relative;*/
 }
 
 .order-content .text-a {
@@ -128,7 +112,6 @@ button {
     font-size: 28rpx;
     line-height: 100rpx;
     font-weight: bold;
-    /*background-color: red;*/
     position: relative;
 }
 
@@ -137,10 +120,8 @@ button {
     height: 112rpx;
     display: flex;
     flex-direction: column;
-    /*justify-content: flex-end;*/
     flex-wrap: wrap;
     margin-bottom: 30rpx;
-    /*background-color: yellow;*/
 }
 
 .order-content image {
@@ -156,8 +137,6 @@ button {
     padding-left: 20rpx;
     font-size: 28rpx;
     line-height: 56rpx;
-    /*font-weight: bold;*/
-    /*background-color: green;*/
     position: relative;
 }
 
@@ -169,27 +148,14 @@ button {
     line-height: 56rpx;
     color: #999;
     position: relative;
-    /*background-color: red;*/
 }
-
-/*.order-content .text-d {
-    flex: 30%;
-    width: 340rpx;
-    padding-left: 20rpx;
-    font-size: 28rpx;
-    line-height: 48rpx;
-    background-color: green;
-    position: relative;
-}*/
 
 .order-content .text-e {
     flex: 100%;
     width: 150rpx;
     font-size: 28rpx;
-    /*font-weight: bold;*/
     line-height: 64rpx;
     text-align: right;
-    /*background-color: blue;*/
     position: relative;
 }
 
@@ -197,9 +163,7 @@ button {
     flex: 50%;
     font-size: 28rpx;
     line-height: 64rpx;
-    /*background-color: green;*/
     position: relative;
-    /*margin-top: 20rpx;*/
 }
 
 .order-content .text-g {
@@ -207,9 +171,7 @@ button {
     font-size: 28rpx;
     line-height: 64rpx;
     text-align: right;
-    /*background-color: yellow;*/
     position: relative;
-    /*margin-top: 20rpx;*/
 }
 
 .order-content .text-h {
@@ -217,7 +179,6 @@ button {
     font-size: 28rpx;
     line-height: 64rpx;
     color: red;
-    /*background-color: green;*/
     position: relative;
 }
 
@@ -227,7 +188,6 @@ button {
     line-height: 64rpx;
     color: red;
     text-align: right;
-    /*background-color: yellow;*/
     position: relative;
 }
 
@@ -236,7 +196,6 @@ button {
     font-size: 26rpx;
     line-height: 100rpx;
     text-align: right;
-    /*background-color: green;*/
     position: relative;
     margin-top: 24rpx;
 }
@@ -248,16 +207,11 @@ button {
     line-height: 100rpx;
     color: red;
     text-align: right;
-    /*background-color: yellow;*/
     position: relative;
     margin-top: 24rpx;
 }
 
-
-
-
 /*-----------------------------------------order-control-----------------------------------------*/
-
 
 .order-control {
     display: flex;
@@ -281,9 +235,3 @@ button {
     font-weight: bold;
     background-color: #ffd300;
 }
-
-
-
-
-
-

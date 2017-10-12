@@ -1,6 +1,4 @@
 
-
-
 <view class="warp"  data-jump="order" bindtap="jump">
     <view class="uone">
         <image class="uone-img" src="../../imgs/02.png"></image>

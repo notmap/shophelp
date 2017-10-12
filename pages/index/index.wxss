@@ -1,23 +1,13 @@
 
-
-
 .warp {
     margin: 20rpx;
-    /*padding: 50rpx;*/
     background-color: #fafafa;
-    /*background-color: blue;*/
     border-radius: 8rpx;
     box-shadow: 0 4rpx 8rpx #ccc;
 }
 
-
 .uone {
-    /*margin: 20rpx;*/
     padding: 60rpx 40rpx;
-    /*background-color: #ffd300;*/
-    /*background-color: #fafafa;*/
-    /*border-radius: 4rpx;*/
-    /*box-shadow: 0 4rpx 8rpx #cccccc;*/
     display: flex;
 }
 
@@ -32,7 +22,6 @@
     padding-left: 30rpx;
     line-height: 64rpx;
     font-size: 36rpx;
-    /*background-color: red;*/
 }
 
 .uone-ttwo {
@@ -40,17 +29,11 @@
     padding-left: 30rpx;
     line-height: 64rpx;
     font-size: 36rpx;
-    /*background-color: red;*/
     flex: 1;
 }
 
 .utwo {
-    /*margin: 20rpx;*/
     padding: 0rpx 0rpx 40rpx 0rpx;
-    /*background-color: #ffd300;*/
-    /*background-color: red;*/
-    /*border-radius: 4rpx;*/
-    /*box-shadow: 0 4rpx 8rpx #cccccc;*/
     display: flex;
 }
 
@@ -59,53 +42,13 @@
     padding-left: 40rpx;
     line-height: 24rpx;
     font-size: 24rpx;
-    /*flex: 1;*/
-    /*background-color: red;*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .scrollbox {
 	height: 100%;
 }
 
-
 /*--------------------------------address--------------------------------*/
-
 
 .address {
 	height: 80rpx;
@@ -121,7 +64,6 @@
 
 .address-info-icon {
     float: left;
-    /*background-color: red;*/
     height: 40rpx;
     padding: 20rpx 0;
     margin-right: 24rpx;
@@ -133,7 +75,6 @@
 	font-size: 28rpx;
 	line-height: 40rpx;
     margin-left: 64rpx;
-	/*background-color: yellow;*/
 }
 
 .address-jump {
@@ -141,7 +82,6 @@
 	height: 80rpx;
 	width: 80rpx;
 	float: right;
-	/*background-color: green;*/
 	position: relative;
 }
 
@@ -158,9 +98,7 @@
     left: 24rpx;
 }
 
-
 /*--------------------------------add--------------------------------*/
-
 
 .add {
 	position: absolute;
@@ -178,14 +116,3 @@
 	line-height: 100rpx;
 	color: #000;
 }
-
-
-
-
-
-
-/*#ffd300*/
-
-
-
-

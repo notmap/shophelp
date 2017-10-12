@@ -1,10 +1,11 @@
-var pageModel;
-var app = getApp()
-Page({
 
+var pageModel;
+var app = getApp();
+
+Page({
     data: {
         voicePrompt: {
-            src: 'http://www.legaoshuo.com/asset/prompt.mp3'
+            src: 'http://video.bugdeer.com/prompt.mp3'
         },
         income: {
             dayAmount: 0,
@@ -20,27 +21,19 @@ Page({
     },
 
 	onLoad: function (options) {
-        var indexShop = options.shopId ? options.shopId : 100011;
+        var indexShop = options.shopId ? options.shopId : 100002;
         app.globalData.indexShopId = indexShop;
-
         pageModel = this; 
-
         pageModel.voicePrompt.createAudioContext(); 
         pageModel.orderSocket.startUp();
-
         pageModel.getData.getShopSales();
         pageModel.getData.getNewOrder();
-
         this.setNewData(['income', 'dayAmount'], this.dataHandler.toFixed);
         this.setNewData(['income', 'monthAmount'], this.dataHandler.toFixed);
         this.setNewData(['income', 'yearAmount'], this.dataHandler.toFixed);
     },
 
-    onShow: function (options) {
-        // setTimeout(() => {
-        //     pageModel.voicePrompt.audioPlay();
-        // }, 1000);
-    },
+    onShow: function (options) {},
 
     orderSocket: {
         socketOpen: false,
@@ -56,7 +49,7 @@ Page({
 
         connect: function() {
             wx.connectSocket({
-                url: 'wss://snack.bugdeer.com/channel/notify/100011',
+                url: `wss://snack.bugdeer.com/channel/notify/${app.globalData.indexShopId}`,
                 header: {
                     'content-type': 'application/json'
                 },
@@ -74,11 +67,10 @@ Page({
         },
 
         close: function() {
-            wx.closeSocket(); // need promise
+            wx.closeSocket(); 
         },
 
         checkQueue: function() {
-            // console.log(this.socketMsgQueue.length);
             if(this.socketMsgQueue.length > 0) {
                 this.socketMsgQueue.shift();
                 return true;
@@ -94,10 +86,8 @@ Page({
 
         onMessage: function() {
             wx.onSocketMessage((res) => {
-
                 delete app.globalData.pNewOrder;
                 pageModel.getData.getNewOrder();
-
                 console.log('message from server: ' + res.data)
                 if(!pageModel.voicePrompt.voiceFlag) {
                     pageModel.voicePrompt.audioPlay();
@@ -123,7 +113,6 @@ Page({
     },
 
     voicePrompt: {
-
         voiceFlag: false,
 
         createAudioContext: function() {
@@ -140,10 +129,8 @@ Page({
     },
 
     getData: {
-
         getShopSales: function() { 
             app.getShopSales().then((shopSales) => {
-                // console.log(shopSales)
                 pageModel.setData({
                     income: shopSales
                 });

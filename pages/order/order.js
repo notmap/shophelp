@@ -1,10 +1,9 @@
+
 var pageModel;
-const orderData = require('../../order_data.js');
 const deepClone = require('../../utils/deepClone');
-
 var app = getApp();
-Page({
 
+Page({
 	data: {
 		swiper: {
             current: '0',
@@ -23,7 +22,7 @@ Page({
 
     tab: {
         switchTab: function(self, e) {
-            var active = e.target.dataset.tab || e.detail.current.toString(); // 注意数据类型
+            var active = e.target.dataset.tab || e.detail.current.toString();
             if(active !== self.data.swiper.current) {
                 self.setData({
                     swiper: {
@@ -39,14 +38,11 @@ Page({
 
         refuse: function(e) {
             var orderId = e.currentTarget.dataset.orderid;
-            // console.log(orderId);
-
             app.postOrderReject(orderId, (res) => {
                 delete app.globalData.pNewOrder
                 pageModel.getData.getNewOrder();
                 delete app.globalData.pRejectOrder
                 pageModel.getData.getRejectOrder();
-                // console.log(res)
             });
         },
 
@@ -57,7 +53,6 @@ Page({
                 pageModel.getData.getNewOrder();
                 delete app.globalData.pIngOrder
                 pageModel.getData.getIngOrder();
-                // console.log(res)
             });
         },
 

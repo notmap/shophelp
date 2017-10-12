@@ -1,54 +1,54 @@
 
-	<view class="tab">
-		<view class="tab-name {{swiper.current == 0 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="0">未接单</view>
-		<view class="tab-name {{swiper.current == 1 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="1">已接单</view>
-		<view class="tab-name {{swiper.current == 2 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="2">已拒单</view>
-	</view>
+<view class="tab">
+	<view class="tab-name {{swiper.current == 0 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="0">未接单</view>
+	<view class="tab-name {{swiper.current == 1 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="1">已接单</view>
+	<view class="tab-name {{swiper.current == 2 ? 'tab-active' : ''}}" data-fun="tab.switchTab" bindtap="onEvent" data-tab="2">已拒单</view>
+</view>
 
-	<swiper class="main" current="{{swiper.current}}" data-fun="tab.switchTab" bindchange="onEvent">
-		<swiper-item>
-			<scroll-view class="neworder" scroll-y="true">
+<swiper class="main" current="{{swiper.current}}" data-fun="tab.switchTab" bindchange="onEvent">
+	<swiper-item>
+		<scroll-view class="neworder" scroll-y="true">
 
-				<view class="neworder-unit" wx:for="{{newOrder}}" wx:key="item.id" bindtap="jump" data-jump="{{item}}">
-					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
-					<block wx:for="{{item.orderProductList}}" wx:for-item="good" wx:key="item.id">
-						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.quantity}}</text>
-					</block>
-					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.totalQuantity}}件商品, 实付￥{{item.realityAmount}}</text>
-					<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="refuse" data-orderid="{{item.id}}">拒单</button>
-					<button class="button-b"  wx:if="{{item.button}}" catchtap="orderEvent" data-event="confirm" data-orderid="{{item.id}}">确认订单</button>
-				</view>
+			<view class="neworder-unit" wx:for="{{newOrder}}" wx:key="item.id" bindtap="jump" data-jump="{{item}}">
+				<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
+				<block wx:for="{{item.orderProductList}}" wx:for-item="good" wx:key="item.id">
+					<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.quantity}}</text>
+				</block>
+				<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.totalQuantity}}件商品, 实付￥{{item.realityAmount}}</text>
+				<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="refuse" data-orderid="{{item.id}}">拒单</button>
+				<button class="button-b"  wx:if="{{item.button}}" catchtap="orderEvent" data-event="confirm" data-orderid="{{item.id}}">确认订单</button>
+			</view>
 
-			</scroll-view>
-		</swiper-item>
+		</scroll-view>
+	</swiper-item>
 
-		<swiper-item>
-			<scroll-view class="neworder" scroll-y="true">
+	<swiper-item>
+		<scroll-view class="neworder" scroll-y="true">
 
-				<view class="neworder-unit" wx:for="{{ingOrder}}" wx:key="item.id" bindtap="jump" data-jump="{{item}}">
-					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
-					<block wx:for="{{item.orderProductList}}" wx:for-item="good" wx:key="item.id">
-						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.quantity}}</text>
-					</block>
-					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.totalQuantity}}件商品, 实付￥{{item.realityAmount}}</text>
-					<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="cancel">取消订单</button>
-				</view>
+			<view class="neworder-unit" wx:for="{{ingOrder}}" wx:key="item.id" bindtap="jump" data-jump="{{item}}">
+				<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
+				<block wx:for="{{item.orderProductList}}" wx:for-item="good" wx:key="item.id">
+					<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.quantity}}</text>
+				</block>
+				<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.totalQuantity}}件商品, 实付￥{{item.realityAmount}}</text>
+				<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="cancel">取消订单</button>
+			</view>
 
-			</scroll-view>
-		</swiper-item>
+		</scroll-view>
+	</swiper-item>
 
-		<swiper-item>
-			<scroll-view class="neworder" scroll-y="true">
+	<swiper-item>
+		<scroll-view class="neworder" scroll-y="true">
 
-				<view class="neworder-unit" wx:for="{{rejectOrder}}" wx:key="item.id" bindtap="jump" data-jump="{{item}}">
-					<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
-					<block wx:for="{{item.orderProductList}}" wx:for-item="good" wx:key="item.id">
-						<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.quantity}}</text>
-					</block>
-					<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.totalQuantity}}件商品, 实付￥{{item.realityAmount}}</text>
-					<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="refund">删除订单</button>
-				</view>
+			<view class="neworder-unit" wx:for="{{rejectOrder}}" wx:key="item.id" bindtap="jump" data-jump="{{item}}">
+				<text class="text-a">订单号: {{item.id}}</text><text class="text-b">{{item.statusInfo}}</text>
+				<block wx:for="{{item.orderProductList}}" wx:for-item="good" wx:key="item.id">
+					<text class="text-c">{{good.name}}</text><text class="text-d">×{{good.quantity}}</text>
+				</block>
+				<text class="text-e" wx:if="{{item.fold}}">...</text><text class="text-f">共{{item.totalQuantity}}件商品, 实付￥{{item.realityAmount}}</text>
+				<button class="button-a" wx:if="{{item.button}}" catchtap="orderEvent" data-event="refund">删除订单</button>
+			</view>
 
-			</scroll-view>
-		</swiper-item>
-	</swiper>
+		</scroll-view>
+	</swiper-item>
+</swiper>
